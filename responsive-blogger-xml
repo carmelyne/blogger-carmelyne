@@ -29,15 +29,20 @@
   </title>
 
   <!-- // Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Great+Vibes:400|Roboto:400,400italic,900italic,900' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes:400|Roboto:400,400italic,900italic,900|Oswald:400,300,700' rel='stylesheet' type='text/css' />
 
   <!-- // Hide Blogger CSS -->
   &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
 
+  <!-- // Bootstrap 3.1.1 CSS on CDN -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+
   <style type='text/css'>
-    body {background:white; color:black; }
-    h1 {font-family: 'Great Vibes', cursive;font-weight: 400;}
+    body {background:white; color:black; font-family: 'Roboto', sans-serif ; font-weight: 400;}
+    h1 {font-family: 'Oswald', sans-serif; font-weight: 400;}
+    h2 {font-family: 'Great Vibes', cursive; font-weight: 400;}
   </style>
+
 
  </head>
 
@@ -45,7 +50,13 @@
 
    <b:section class='main' id='main' showaddelement='yes'/>
 
-   <center><h1><a href="http://google.com/+CarmelyneThompson">+CarmelyneThompson</a></h1></center>
+   <center>
+     <h1><a href="http://google.com/+CarmelyneThompson">+CarmelyneThompson</a></h1>
+     <h2>You're on my site.</h2>
+   </center>
+
+   <!-- // Bootstrap 3.1.1 JS on CDN -->
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
  </body>
 
 </html>
