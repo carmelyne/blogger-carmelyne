@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+    <meta name="text:Analytics" content=""/>
+    <meta name="text:Disqus Shortname" content=""/>
+    {block:IfDisqusShortname}<script type="text/javascript">disqusEnabled = true;disqusShortname = "{text:Disqus Shortname}";</script>{/block:IfDisqusShortname}
+
+    <!-- COLORS -->
+    <meta name="color:HeaderForeground" content="#211f1f"/>
+    <meta name="font:BodyFont" content="'Helvetica Neue', Helvetica, Arial, sans-serif" />
+    <meta name="image:HeaderBackground" content="">
+    {block:IfHeaderBackgroundImage}<style type="text/css">#header{ background-image: url({image:HeaderBackground}); background-repeat: repeat; }</style>{/block:IfHeaderBackgroundImage}
+
+    <!-- vanilla -->
+    <meta name="if:PlainWhite" content="0">
+    <link href="http://fonts.googleapis.com/css?family=Great+Vibes:400|Roboto:400,400italic,900italic,900|Oswald:400,300,700" rel="stylesheet" type="text/css"/>
+
+    <style type="text/css">
+      body { font-family: "Roboto", sans-serif ; font-weight: 400; text-shadow: 0 1px 3px rgba(0,0,0,.5); box-shadow: inset 0 0 100px rgba(0,0,0,.5);height: 100%;}
+      {block:IfPlainWhite}
+      html { background-color: #fff; }
+
+      #nav_wrap h1 {
+        font-size: 30px;
+        margin-top: 40px;
+        float: left;
+        font-family: "Great Vibes", cursive !important; font-weight: 400 !important;
+        }
+      #nav_wrap h1, #nav_wrap h2, #nav_wrap h3 {font-family: "Great Vibes", cursive !important; font-weight: 400 !important;}
+
+      a { color: #0F0E0F; }
+
+      #page { color: #211f1f;}
+      #pagination-posts a { color: #fff; background-color: #333;}
+
+      #header{ color: {color:HeaderForeground}; }
+      #header a, #features a { color: {color:HeaderForeground}; }
+      #features .pagination a { color: #fff; background-color: #333;}
+      #features .navigation .on {color: #666;}
+
+      #nav-bottom { color: #211f1f; }
+      #nav-bottom a, #nav-bottom span { color: #211f1f; }
+      #nav-bottom ul {border-bottom: 0px !important;}
+
+      .link-text { color: #211f1f; border-bottom: 2px solid #0F0E0F; }
+
+      ::selection { background: #333; color: #fffcf5;}
+      {/block:IfPlainWhite}
+      {block:IfNotPlainWhite}
+      html { background-color: #333; }
+
+      #nav_wrap h1 {
+        font-size: 30px;
+        margin-top: 40px;
+        width: 400px;
+        float: left;
+        text-transform: capitalize;
+        font-family: "Great Vibes", cursive !important; font-weight: 400 !important;
+        }
+      #nav_wrap h1 a {color: #fff;}
+
+      #nav-top ul {
+        text-align: right;
+        text-transform: capitalize !important;
+        margin: 40px auto 0;
+        font-family: "Roboto", sans-serif  !important; font-weight: 400  !important;
+        }
+
+      #nav-top ul a {
+        font-size: 16px  !important;
+        color: rgba(255,255,255,.75) !important;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 15px;
+      }
+
+      #nav-top ul a:hover, #nav-top ul a:focus {
+        background-color: transparent;
+        border-bottom-color: rgba(255,255,255,.25);
+        text-decoration: none;
+      }
+
+      a { color: #ff9635; }
+
+      #page { color: #fff; background-color: #333; box-shadow: inset 0 0 100px rgba(0,0,0,.5); }
+      #pagination-posts a { color: #ff9635; background-color: #333;}
+
+      #header{  color: {color:HeaderForeground}; }
+      #header a, #features a { color: {color:HeaderForeground}; font-size: 24px;}
+      #features .pagination a { color: #d6d2cc; background-color: #211f1f;}
+      #features .navigation .on {color: #c94a00;}
+
+      #nav-bottom { color: #fff; }
+      #nav-bottom a { color: #fff; }
+      #nav-bottom ul {border-bottom: 0px !important;}
+
+      .link-text { color: #211f1f; border-bottom: 2px solid #c94a00; }
+
+      ::selection { background: #c94a00; color: #fffcf5;}
+
+      {/block:IfNotPlainWhite}
+
+      {CustomCSS}
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="http://ade-paperstacks.s3.amazonaws.com/assets/paperstacks_theme.css" />
+
+  </head>
+  <body class="{block:IndexPage}index{/block:IndexPage} {block:PermalinkPage}show{/block:PermalinkPage} {block:TagPage}tag_page{/block:TagPage}">
+
+    <div id="extra_div_1"></div>
+    <div id="page">
+      <div id="extra_div_2"></div>
+      <div id="header">
+        <div id="nav_wrap">
+          <h1><a href="http://www.carmelyne.com/">
+              {Title}
+          </a></h1>
+          <div class="nav" id="nav-top">
+            <ul class="menu">
+              <!--{block:Pages}
+              <li class="page {Label}"><a href="{URL}" title="{Label}">{Label}</a></li>
+              {/block:Pages}
+              {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+              <li class="tumblr-archive"><a href="/archive">Archive</a></li>-->
+              <li><a href='http://carmelyne.storenvy.com/' target='_blank'>Carmelyzed</a></li>
+              <li class="active"><a href='http://blog.carmelyne.com/'>Doodles</a></li>
+              <li><a href='http://carmelyne.com/'>Blog</a></li>
+              <li><a href='http://code.carmelyne.com/'>Code</a></li>
+            </ul>
+          </div>
+          {block:TagPage}<h2 class="tag">{Tag}</h2>{/block:TagPage}
+        </div>
+      </div><!-- #header -->
+
+      {block:Description}
+      <div id="description">
+        <div class="description-text">{Description}</div>
+      </div>
+      {/block:Description}
+      <div id="posts-wrap" class="wrap">
+        <ul id="posts" class="{block:IndexPage}index{/block:IndexPage} {block:PermalinkPage}show{/block:PermalinkPage}">
+          {block:Posts}
+          <li id="post_{PostID}" class="post{block:Text} text{/block:Text}{block:Photo} photo{/block:Photo}{block:Photoset} photoset{/block:Photoset}{block:Quote} quote{/block:Quote}{block:Link} link{/block:Link}{block:Chat} chat{/block:Chat}{block:Video} video{/block:Video}{block:Audio} audio{/block:Audio}{block:Answer} answer{/block:Answer}{block:PermalinkPage} permalink_page{/block:PermalinkPage} {TagsAsClasses}" data-permalink="{Permalink}" data-post-type="{PostType}">
+            <div class="post-pad">
+              <div class="post-meta">
+                {block:Title}<h3 class="post-title"><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+                {block:Date}
+                <div class="date date-top">
+                  <a href="{Permalink}">
+                    <span class="days">{Month} {DayOfMonth}, {Year}</span>
+                    <span class="time">{12Hour}:{Minutes} {AmPm}</span>
+                  </a>
+                </div>
+                {/block:Date}
+              </div>
+
+              <div class="post-content">
+                {block:Photo}
+                <a class="photo-permalink" href="{block:IndexPage}{Permalink}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}"><img src="{block:IndexPage}{PhotoURL-400}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" alt="{PhotoAlt}" data-highres="{PhotoURL-HighRes}" class="post-image" /></a>
+                {/block:Photo}
+
+                {block:Photoset}
+                <div class="photoset_wrap" data-permalink="{block:IndexPage}{Permalink}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}">
+                  {block:Photos}
+                  <a class="photoset_photo" href="{Permalink}"><img src="{block:IndexPage}{PhotoURL-400}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" data-highres="{PhotoURL-HighRes}" class="post-image" /></a>
+                  {/block:Photos}
+                </div>
+                {/block:Photoset}
+
+                {block:Video}
+                <div class="video-player">{Video-500}</div>
+                {/block:Video}
+
+                {block:Audio}
+                <div class="audio-player" {block:Artist}data-artist={URLEncodedArtist}{/block:Artist} {block:TrackName}data-track={URLEncodedTrackName} {block:Album}data-album={URLEncodedAlbum}{/block:Album} {block:AlbumArt}data-art="{AlbumArtURL}"{/block:AlbumArt}>
+                  {block:Artist}<h3 class="id3 artist-name">{Artist}</h3>{/block:Artist}
+                  {block:TrackName}<h4 class="id3 song-name">{TrackName}</h4>{/block:TrackName}
+                  {block:Album}<h5 class="id3 album-name">{Album}</h5>{/block:Album}
+                  {AudioPlayerBlack}
+                </div>
+                {block:AlbumArt}<div class="audio-cover"><img src="{AlbumArtURL}" /></div>{/block:AlbumArt}
+                {/block:Audio}
+
+                {block:Text}
+                <div class="text-body">
+                  {Body}
+                </div>
+                {/block:Text}
+
+                {block:Quote}
+                <div class="quote-text">{Quote}</div>
+                {block:Source}<div class="quote-source">{Source}</div>{/block:Source}
+                {/block:Quote}
+
+                {block:Link}
+                <a href="{URL}" class="link-text" {Target}>{Name}</a>
+                {block:Description}<div class="link-description">{Description}</div>{/block:Description}
+                {/block:Link}
+
+                {block:Chat}
+                <ul class="chat-messages">
+                  {block:Lines}
+                  <li class="{Alt} chat-user_{UserNumber}">
+                    {block:Label}<span class="chat-label">{Label}</span>{/block:Label}
+                    <p class="chat-line">{Line}</p>
+                  </li>
+                  {/block:Lines}
+                </ul>
+                {/block:Chat}
+
+                {block:Answer}
+                <div class="question">
+                   {Question}
+                </div>
+                <div class="asker_container">{Asker}</div>
+                {block:PermalinkPage}<div class="answer">{Answer}</div>{/block:PermalinkPage}
+                {/block:Answer}
+
+                {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+              </div>
+
+              <div class="social tmblr-social">
+                <a class="like tmblr-like" href="#" data-id="{PostID}" data-reblog-url="{ReblogURL}">Like</a>
+                <a href="{ReblogURL}" class="reblog tmblr-reblog">Reblog</a>
+              </div>
+
+
+              {block:HasTags}
+              <div class="tags">
+                <h4>Tags</h4>
+                <ul class="tags-list">
+                  {block:Tags}
+                  <li class="tag"><a href="{TagURL}">{Tag}</a></li>
+                  {/block:Tags}
+                </ul>
+              </div>
+              {/block:HasTags}
+
+              {block:ContentSource}
+              <div class="source">
+                <span class="source-label">via</span>
+                <a href="{SourceURL}" class="source-title">{SourceTitle}</a>
+              </div>
+              {/block:ContentSource}
+
+              {block:IndexPage}<a class="permalink" href="{Permalink}">&#x279C;</a>{/block:IndexPage}
+            </div> <!-- .post-pad -->
+          </li>
+          {/block:Posts}
+        </ul> <!-- #posts -->
+        {block:PermalinkPagination}
+        <div class="pagination" id="pagination-posts">
+          <div class="pagination-links">
+            {block:NextPost}<a class="pagination-newer" href="{NextPost}">&#x25C0;</a>{/block:NextPost}
+            {block:PreviousPost}<a class="pagination-older" href="{PreviousPost}">&#x25B6;</a>{/block:PreviousPost}
+          </div>
+        </div>
+        {/block:PermalinkPagination}
+      </div><!-- #posts-wrap -->
+
+      {block:Pagination}
+      <div class="pagination" id="pagination-pages">
+        <div class="pagination-links">
+          {block:PreviousPage}<a class="pagination-newer" href="{PreviousPage}">&#x25C0; Newer</a>{/block:PreviousPage}
+          <a class="pagination-archive" href="/archive">Archive</a>
+          {block:NextPage}<a class="pagination-older" href="{NextPage}">Older &#x25B6;</a>{/block:NextPage}
+        </div>
+      </div>
+      {/block:Pagination}
+
+      {block:PermalinkPage}
+      <div class="note-wrap">
+        {block:Posts}{block:NoteCount}<div class="notecount">{NoteCountWithLabel}</div>{/block:NoteCount}{/block:Posts}
+        {block:PostNotes}{PostNotes}{/block:PostNotes}
+      </div>
+      {block:IfDisqusShortname}
+      <!-- DISQUS COMMENTS -->
+      <div id="disqus">
+        <h2>{lang:Recent comments}</h2>
+        <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_identifier = {PostID};
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqusShortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:DisqusShortname}">comments powered by Disqus.</a></noscript>
+        {lang:Blog comments powered by Disqus 2}
+      </div><!-- /#disqus -->
+      {/block:IfDisqusShortname}
+
+      {/block:PermalinkPage}
+
+      <div class="nav" id="nav-bottom">
+        <ul class="menu">
+          {block:Pages}
+          <li class="page {Label}"><a href="{URL}" title="{Label}">{Label}</a></li>
+          {/block:Pages}
+          <li class="tumblr-archive"><a href="/archive">Archive</a></li>
+        </ul>
+        <div id="footerInfo">
+          <div class="sized">
+            {block:Description}<p>{Description}</p>{/block:Description}
+            <p>&#169; 2014 <a href='http://google.com/+CarmelyneThompson'>+CarmelyneThompson</a> /   <a href='http://blog.carmelyne.com/ask'>Ask me anything.</a></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="extra_div_3"></div>
+    </div><!-- #page -->
+    <div id="extra_div_4"></div>
+    <script src="http://ade-paperstacks.s3.amazonaws.com/assets/paperstacks_theme.js"></script>
+    {block:IfAnalytics}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Analytics}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    {/block:IfAnalytics}
+  </body>
+</html>
