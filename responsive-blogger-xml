@@ -29,18 +29,180 @@
   </title>
 
   <!-- // Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Great+Vibes:400|Roboto:400,400italic,900italic,900|Oswald:400,300,700' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes:400|Roboto:400,400italic,900italic,900|Oswald:400,300,700' rel='stylesheet' type='text/css'/>
 
   <!-- // Hide Blogger CSS -->
   &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
 
   <!-- // Bootstrap 3.1.1 CSS on CDN -->
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet'/>
 
   <style type='text/css'>
-    body {background:white; color:black; font-family: 'Roboto', sans-serif ; font-weight: 400;}
-    h1 {font-family: 'Oswald', sans-serif; font-weight: 400;}
-    h2 {font-family: 'Great Vibes', cursive; font-weight: 400;}
+    body {background:white; color:black; font-family: &#39;Roboto&#39;, sans-serif ; font-weight: 400;}
+    h1 {font-family: &#39;Oswald&#39;, sans-serif; font-weight: 400;}
+    h2,h3 {font-family: &#39;Great Vibes&#39;, cursive; font-weight: 400;}
+
+    /*
+     * Globals
+     */
+
+    /* Links */
+    a,
+    a:focus,
+    a:hover {
+      color: #fff;
+    }
+
+    /* Custom default button */
+    .btn-default,
+    .btn-default:hover,
+    .btn-default:focus {
+      color: #333;
+      text-shadow: none; /* Prevent inheritence from `body` */
+      background-color: #fff;
+      border: 1px solid #fff;
+    }
+
+
+    /*
+     * Base structure
+     */
+
+    html,
+    body {
+      height: 100%;
+      background-color: #333;
+    }
+    body {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0,0,0,.5);
+      box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    }
+
+    /* Extra markup and styles for table-esque vertical and horizontal centering */
+    .site-wrapper {
+      display: table;
+      width: 100%;
+      height: 100%; /* For at least Firefox */
+      min-height: 100%;
+    }
+    .site-wrapper-inner {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .cover-container {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    /* Padding for spacing */
+    .inner {
+      padding: 30px;
+    }
+
+
+    /*
+     * Header
+     */
+    .masthead-brand {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .masthead-nav &gt; li {
+      display: inline-block;
+    }
+    .masthead-nav &gt; li + li {
+      margin-left: 20px;
+    }
+    .masthead-nav &gt; li &gt; a {
+      padding-right: 0;
+      padding-left: 0;
+      font-size: 16px;
+      font-family: &#39;Roboto&#39;, sans-serif ;
+      font-weight: 400;
+      color: #fff; /* IE8 proofing */
+      color: rgba(255,255,255,.75);
+      border-bottom: 2px solid transparent;
+    }
+    .masthead-nav &gt; li &gt; a:hover,
+    .masthead-nav &gt; li &gt; a:focus {
+      background-color: transparent;
+      border-bottom-color: rgba(255,255,255,.25);
+    }
+    .masthead-nav &gt; .active &gt; a,
+    .masthead-nav &gt; .active &gt; a:hover,
+    .masthead-nav &gt; .active &gt; a:focus {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+
+    @media (min-width: 768px) {
+      .masthead-brand {
+        float: left;
+      }
+      .masthead-nav {
+        float: right;
+      }
+    }
+
+
+    /*
+     * Cover
+     */
+
+    .cover {
+      padding: 0 20px;
+    }
+    .cover .btn-lg {
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+
+    /*
+     * Footer
+     */
+
+    .mastfoot {
+      color: #999; /* IE8 proofing */
+      color: rgba(255,255,255,.5);
+    }
+
+
+    /*
+     * Affix and center
+     */
+
+    @media (min-width: 768px) {
+      /* Pull out the header and footer */
+      .masthead {
+        position: fixed;
+        top: 0;
+      }
+      .mastfoot {
+        position: fixed;
+        bottom: 0;
+      }
+      /* Start the vertical centering */
+      .site-wrapper-inner {
+        vertical-align: middle;
+      }
+      /* Handle the widths */
+      .masthead,
+      .mastfoot,
+      .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+      }
+    }
+
+    @media (min-width: 992px) {
+      .masthead,
+      .mastfoot,
+      .cover-container {
+        width: 700px;
+      }
+    }
   </style>
 
 
@@ -49,14 +211,50 @@
  <body>
 
    <b:section class='main' id='main' showaddelement='yes'/>
+   <div class='site-wrapper'>
 
-   <center>
-     <h1><a href="http://google.com/+CarmelyneThompson">+CarmelyneThompson</a></h1>
-     <h2>You're on my site.</h2>
-   </center>
+      <div class='site-wrapper-inner'>
+
+        <div class='cover-container'>
+
+          <div class='masthead clearfix'>
+            <div class='inner'>
+              <h3 class='masthead-brand'><a href='http://www.carmelyne.com/'>Carmelyne Thompson</a></h3>
+              <ul class='nav masthead-nav'>
+                <li><a href='http://code.carmelyne.com/'>Code</a></li>
+                <li><a href='http://carmelyne.com/'>Blog</a></li>
+                <li><a href='http://blog.carmelyne.com/'>Doodles</a></li>
+                <li><a href='http://carmelyne.storenvy.com/'>Carmelyzed</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class='inner cover'>
+            <h1 class='cover-heading'>Hello! Site: work in progress!</h1>
+            <p class='lead'>
+              <!-- div -->
+            </p>
+            <p class='lead'>Mobile &amp; web developer. UX &amp; UI.</p>
+            <p class='lead'>Doodler. Makes custom Android toys.</p>
+            <p class='lead'>
+              <!--<a href="#" class="btn btn-lg btn-default">Learn more</a>-->
+            </p>
+          </div>
+
+          <div class='mastfoot'>
+            <div class='inner'>
+              <p>&#169; 2014 <a href='http://google.com/+CarmelyneThompson'>+CarmelyneThompson</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+   </div>
 
    <!-- // Bootstrap 3.1.1 JS on CDN -->
-   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'/>
  </body>
 
 </html>
