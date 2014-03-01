@@ -28,13 +28,16 @@
         </b:if>
   </title>
 
-  <b:skin>
-    <![CDATA[/*
-      body { background:white;
-             color:black; }
-      #Navbar1 {dispaly:none!important;}
-    ]]>
-  </b:skin>
+  <!-- // Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css' />
+
+  <!-- // Hide Blogger CSS -->
+  &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
+
+  <style type='text/css'>
+      body {background:white; color:black; }
+      h1 {font-family: 'Great Vibes', cursive;}
+  </style>
 
  </head>
 
@@ -42,7 +45,7 @@
 
    <b:section class='main' id='main' showaddelement='yes'/>
 
-   <center><a href="http://google.com/+CarmelyneThompson">+CarmelyneThompson</a></center>
+   <center><h1><a href="http://google.com/+CarmelyneThompson">+CarmelyneThompson</a></h1></center>
  </body>
 
 </html>
