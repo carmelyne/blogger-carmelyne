@@ -29,14 +29,14 @@
   </title>
 
   <!-- // Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes:400|Roboto:400,400italic,900italic,900' rel='stylesheet' type='text/css' />
 
   <!-- // Hide Blogger CSS -->
   &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
 
   <style type='text/css'>
-      body {background:white; color:black; }
-      h1 {font-family: 'Great Vibes', cursive;}
+    body {background:white; color:black; }
+    h1 {font-family: 'Great Vibes', cursive;font-weight: 400;}
   </style>
 
  </head>
