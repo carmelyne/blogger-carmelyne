@@ -129,8 +129,8 @@
               {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
               <li class="tumblr-archive"><a href="/archive">Archive</a></li>-->
               <li><a href='http://carmelyne.storenvy.com/' target='_blank'>Carmelyzed</a></li>
-              <li class="active"><a href='http://blog.carmelyne.com/'>Doodles</a></li>
-              <li><a href='http://carmelyne.com/'>Blog</a></li>
+              <li class="active"><a href='http://doodles.carmelyne.com/'>Doodles</a></li>
+              <li><a href='http://blog.carmelyne.com/'>Blog</a></li>
               <li><a href='http://code.carmelyne.com/'>Code</a></li>
             </ul>
           </div>
@@ -310,7 +310,7 @@
         <div id="footerInfo">
           <div class="sized">
             {block:Description}<p>{Description}</p>{/block:Description}
-            <p>&#169; 2014 <a href='http://google.com/+CarmelyneThompson'>+CarmelyneThompson</a> /   <a href='http://blog.carmelyne.com/ask'>Ask me anything.</a></p>
+            <p>&#169; 2014 <a href='http://google.com/+CarmelyneThompson'>+CarmelyneThompson</a> /   <a href='http://doodles.carmelyne.com/ask'>Ask me anything.</a></p>
           </div>
         </div>
       </div>
